@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wishes</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #121212;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            color: #ffffff;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .container h1 {
+            font-size: 3rem;
+            margin: 0;
+            opacity: 0;
+            animation: slideIn 3s ease-in-out forwards;
+        }
+
+        .container h2 {
+            font-size: 2rem;
+            margin: 0;
+            opacity: 0;
+            animation: slideIn 4s ease-in-out forwards;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .image-container {
+            margin-top: 20px;
+            opacity: 0;
+            animation: zoomIn 5s ease-in-out forwards;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .image-container img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid #ffffff;
+        }
+
+        .glow {
+            text-shadow: 0 0 8px #ffffff, 0 0 12px #ffffff, 0 0 16px #ffffff;
+        }
+
+        .sparkles {
+            position: relative;
+            display: inline-block;
+        }
+
+        .sparkles::before {
+            content: "🎉";
+            font-size: 2rem;
+            position: absolute;
+            top: -1.5rem;
+            left: -1rem;
+            animation: sparkle 2s linear infinite;
+        }
+
+        @keyframes sparkle {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="glow sparkles">Happy 21st Birthday, Akhilesh Patil!</h1>
+        <h2 class="glow">Wishing You a Wonderful Year Ahead!</h2>
+        <div class="image-container">
+            <img src="akhiesh patil.jpg" alt=" ">
+        </div>
+    </div>
+</body>
+</html>
